@@ -1,0 +1,29 @@
+/*
+  Name: Jason Jun
+  Student Number: 126683200
+  Email: jjun10@myseneca.ca
+*/
+
+/**
+ * Styles for the add-observation.html page 
+ */
+
+.required {
+  color: red;
+}
+
+#o_description {
+  width: 500px;
+}
+
+#o_notes {
+  width: 520px;
+}
+
+#p_name {
+  width: 500px;
+}
+
+#p_email {
+  width: 500px;
+}
