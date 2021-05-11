@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h2 id="table-title">Wildlife Observations: <span>abd</span></h2>
+
+    <script>
+      window.onload = function () {
+        // function createTime(formatted) {
+        //   let con = document.createElement('span');
+        //   let text = document.createElement('time').setAttribute('datetime', formatted);
+
+        //   con.appendChild(text);
+        //   document.body.appendChild(con);
+        // }
+
+        let test = new Date(Date.parse("2021-02-10T19:44:33+00:00"));
+        console.log(test);
+        console.log(test.toLocaleDateString());
+
+        let text = test.toLocaleDateString();
+        text = text.split("/");
+        text = `${text[2]}-${text[1]}-${text[0]}`;
+
+        let time = document.createElement("time");
+
+        text = document.createTextNode(text);
+        // time.dateTime = text2;
+        // time.setAttribute('datetime', text2);
+        time.appendChild(text);
+
+        console.log(time);
+        document.body.appendChild(time);
+
+        let an = document.createElement("a");
+        an.setAttribute("href", "http://www.google.com");
+        let x = document.createTextNode("goo");
+        an.appendChild(x);
+        document.body.appendChild(an);
+
+        document.querySelector("#table-title span").innerHTML = an;
+      };
+    </script>
+  </body>
+</html>
